@@ -19,7 +19,9 @@ const Layout = () => {
     { name: 'Publisher', href: '/publish', icon: PaperAirplaneIcon },
   ]
 
-  const isActive = (href: string) => location.pathname === href
+  // Highlight parent items for nested routes as well
+  const isActive = (href: string) =>
+    location.pathname === href || location.pathname.startsWith(`${href}/`)
 
   return (
     <div className="min-h-screen bg-gray-900">

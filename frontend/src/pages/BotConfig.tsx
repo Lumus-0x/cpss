@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
-import api from '../services/api'
-import TelegramConfig from '../components/BotConfig/TelegramConfig'
-import DiscordConfig from '../components/BotConfig/DiscordConfig'
+import { useState } from 'react'
+import TelegramConfig from '@/components/BotConfig/TelegramConfig'
+import DiscordConfig from '@/components/BotConfig/DiscordConfig'
 
 const BotConfig = () => {
   const [activeTab, setActiveTab] = useState<'telegram' | 'discord'>('telegram')
